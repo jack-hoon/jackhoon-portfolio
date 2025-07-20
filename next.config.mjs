@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 
-const prefix =
-  process.env.NODE_ENV === 'production' ? '/jackhoon-portfolio/' : '';
-
-const basePath =
-  process.env.NODE_ENV === 'production' ? '/jackhoon-portfolio' : '';
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: 'export',
-  assetPrefix: prefix,
-  basePath: basePath
-}
+  reactStrictMode: true,
+  images: {
+    unoptimized: true, // Disable default image optimization
+  },
+  assetPrefix: isProd ? '/jackhoon-portfolio/' : '',
+  basePath: isProd ? '/jackhoon-portfolio' : '',
+  output: 'export'
+};
 
-export default nextConfig
+export default nextConfig;
