@@ -1,0 +1,99 @@
+.main {
+  padding: 120px max(calc((100svw - 1000px) / 2), 100px) 50px max(calc((100svw - 1000px) / 2), 100px);
+}
+
+.main img {
+  width: 100%;
+  object-fit: contain;
+  text-align: center;
+}
+
+.main h1 {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.main h2 {
+  margin-top: 50px;
+  text-align: left;
+  font-size: 35px;
+}
+
+.main .sentenceBlock {
+  background-color: rgb(25, 25, 25);
+  color: aliceblue;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+.main .sentenceBlock p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.main .imgbox {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 10px;
+  padding: 20px;
+  min-height: 250px;
+  background-color: rgb(25, 25, 25);
+}
+
+.main .imgbox .imgandname {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main .imgbox .imgandname h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.main .imgbox .imgandname p {
+  color: rgb(207, 207, 207);
+  text-align: center;
+  font-size: 15px;
+}
+
+.main .imgbox .imgandname a img:hover {
+  transform: scale(1.05);
+}
+
+.main .devlog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, calc(33% - 20px));
+  margin: 30px 0px 90px 0px;
+  gap: 34px;
+}
+
+.main .devlog .container {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(87, 87, 87);
+  background-color: rgb(26, 26, 26);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.main .devlog .container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgb(97, 97, 97);
+}
+
+.main .devlog .container img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0px;
+  object-fit: fill;
+  aspect-ratio: 2 / 1;
+}
+
+.main .devlog .container p {
+  margin: 20px 12px;
+  color: rgb(204, 204, 204);
+}

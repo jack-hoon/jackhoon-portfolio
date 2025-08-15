@@ -1,0 +1,114 @@
+.main, .references {
+  padding: 180px max(calc((100svw - 1000px) / 2), 100px) 180px max(calc((100svw - 1000px) / 2), 100px);
+}
+
+.main h1 {
+  font-size: 46px;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 36px;
+}
+
+.main h3 {
+  margin-top: 35px;
+  text-align: right;
+}
+
+.main p {
+  font-size: 22px;
+}
+
+.main .outline_image {
+  border-radius: 15px;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgb(165, 165, 165);
+}
+
+.main .text_and_image {
+  display: grid;
+  grid-template-columns: auto 427px;
+  gap: 10px;
+}
+
+.main .block {
+  margin-top: 50px;
+}
+
+.main .imgblock {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main .block .codeblock {
+  margin: 15px 0px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: rgb(31, 31, 31);
+}
+
+.main .block .codeblock pre {
+  font-family: Consolas;
+  color: rgb(175, 186, 196);
+}
+
+.main .github_container {
+  margin: 40px 0px;
+  border-radius: 15px;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgb(165, 165, 165);
+  background-color: rgb(34, 34, 34);
+  transition: outline-width .1s;
+}
+
+.main .github_container:hover {
+  outline-width: 3px;
+}
+
+.main .github_container .internal {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 10px;
+}
+
+.main .github_container .internal h1 {
+  font-size: 20px;
+  font-family: ui-sans-serif;
+  color: rgb(204, 204, 204);
+}
+
+.main .github_container .internal p {
+  font-size: 20px;
+  font-family: ui-sans-serif;
+  color: rgb(124, 124, 124);
+}
+
+.references {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: rgb(26, 26, 30);
+}
+
+.references h2 {
+  font-size: 40px;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.references p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.references .block {
+  margin-top: 50px;
+}
+
+.references a {
+  text-decoration: underline;
+}

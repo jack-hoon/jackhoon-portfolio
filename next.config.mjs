@@ -9,9 +9,12 @@ const nextConfig = {
   },
   assetPrefix: isProd ? '/jackhoon-portfolio/' : '',
   basePath: isProd ? '/jackhoon-portfolio' : '',
-  output: 'export',
-  publicRuntimeConfig: {
-    basePath: isProd ? '/jackhoon-portfolio' : '',
+  env: {
+    BASE_PATH: isProd ? '/jackhoon-portfolio' : '',
+  },
+  i18n: {
+    locales: ['en', 'ko'],
+    defaultLocale: 'en',
   }
 };
 
