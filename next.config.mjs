@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 
+import createNextIntlPlugin from 'next-intl/plugin';
+const withNextIntl = createNextIntlPlugin();
+
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
@@ -11,11 +14,7 @@ const nextConfig = {
   basePath: isProd ? '/jackhoon-portfolio' : '',
   env: {
     BASE_PATH: isProd ? '/jackhoon-portfolio' : '',
-  },
-  i18n: {
-    locales: ['en', 'ko'],
-    defaultLocale: 'en',
   }
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
