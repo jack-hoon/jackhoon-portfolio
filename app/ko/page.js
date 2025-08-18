@@ -1,15 +1,13 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
-import IframelyEmbed from "./components/IframelyEmbed";
+import IframelyEmbed from "../components/IframelyEmbed";
 
 import { useState, useEffect, useRef } from "react";
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 
 export default function Home() {
-  const t = useTranslations('Main');
   const basePath = process.env.BASE_PATH || '';
   const [state1, setState1] = useState('shown');
   const [state2, setState2] = useState('hidden');
@@ -84,14 +82,14 @@ export default function Home() {
                 priority
               />
               <div className={styles.greeting}>
-                <h3>{t('hello')}</h3>
-                <h1>{t('my_name')}</h1>
-                <h2>{t('my_job')}</h2>
+                <h3>안녕하세요, 저는</h3>
+                <h1>이재훈</h1>
+                <h2>주니어 게임 개발자 입니다</h2>
                 <p
                   className={styles.nextlink}
                   onClick={handleAkaClick1}
                 >
-                  {t('pseudonyms')}
+                  가명 ➡️
                 </p>
               </div>
             </div>
@@ -113,14 +111,14 @@ export default function Home() {
                 height={250}
               />
               <div className={styles.greeting}>
-                <h3>{t('hello')}</h3>
-                <h1>{t('my_name')}</h1>
-                <h2>{t('my_virtual_job')}</h2>
+                <h3>안녕하세요, 저는</h3>
+                <h1>Yesman</h1>
+                <h2>Epic Fight팀의 리드 개발자입니다</h2>
                 <p
                   className={styles.nextlink}
                   onClick={handleAkaClick2}
                 >
-                  {t('myself')}
+                  진명 ➡️
                 </p>
               </div>
             </div>
@@ -187,12 +185,12 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.about} id="about">
-        <h1 style={{fontSize: '45px'}}>💫 {t('about')}</h1>
+        <h1 style={{fontSize: '45px'}}>💫 소개</h1>
         <div className={styles.container}>
           <div className={styles.block}>
-            <h1 className={styles.introduce}>{t('about1')}</h1>
-            <h2 className={styles.introduce}>{t('about2')}</h2>
-            <p className={styles.introduce}>{t('about3')}</p>
+            <h1 className={styles.introduce}>본인소개</h1>
+            <h2 className={styles.introduce}>저는 대한민국 인천에 거주중인 초급 주니어 개발자 입니다.</h2>
+            <p className={styles.introduce}>저는 3D그래픽, 게임 개발과 관련된 수학, 그리고 물리 시뮬레이션에 관심이 많습니다. 저는 대학에서 컴퓨터공학을 전공했으며, 3차원 기하학과 벡터, OpenGL을 사용한 그래픽 파이프라인에 대해 흥미롭게 공부하였습니다. 제 일생의 목표는 제가 스스로 기획한 3D 액션 어드벤쳐 게임을 만드는 것입니다.</p>
           </div>
           <Image
             aria-hidden
@@ -202,8 +200,8 @@ export default function Home() {
             height={256}
           />
           <div className={styles.block}>
-            <h1 className={styles.introduce}>{t('about_yesman')}</h1>
-            <p className={styles.introduce}>{t('about_yesman1')}</p>
+            <h1 className={styles.introduce}>Yesman</h1>
+            <p className={styles.introduce}>Yesman은 다양한 소셜 미디어를 통해 사람들과 소통할때 제가 사용하는 별칭입니다. 저는 2020년 8월부터 Epic Fight라 불리는 Minecraft 애드온 개발 프로젝트를 운영하고 있으며, 저의 게임 개발 스킬을 갈고닦을 수 있는 값진 경험이었습니다.</p>
           </div>
           <Image
             aria-hidden
@@ -215,7 +213,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.projects} id="projects">
-        <h1 style={{fontSize: '45px'}}>🗁 {t('projects')}</h1>
+        <h1 style={{fontSize: '45px'}}>🗁 프로젝트</h1>
         <div className={styles.container}>
           <Link className={styles.block} href={`/project/epicfight`}>
             <Image
@@ -226,8 +224,8 @@ export default function Home() {
               height={128}
             />
             <div style={{lineHeight: '60px'}}>
-              <h1>{t('epicfight')}</h1>
-              <h2>{t('epicfight_subtitle')}</h2>
+              <h1>Epic Fight</h1>
+              <h2>The Minecraft Modding Project</h2>
             </div>
             <div className={styles.techStack}>
               <Image
@@ -256,11 +254,11 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.activities} id="activities">
-        <h1 style={{fontSize: '45px'}}>🔗 {t('activities')}</h1>
+        <h1 style={{fontSize: '45px'}}>🔗 활동</h1>
         <div className={styles.grid}>
           <div className={styles.container}>
             <div className={styles.block}>
-              <h2>📹 {t('recent_videos')}</h2>
+              <h2>📹 최근 영상</h2>
               <div className={styles.list}>
                 <iframe
                   width="100%"
@@ -285,7 +283,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.block}>
-              <h2>🖹 {t('recent_postings')}</h2>
+              <h2>🖹 최근 포스트</h2>
               <div className={styles.list}>
                 <IframelyEmbed embedHtml='
                   <div class="iframely-embed">

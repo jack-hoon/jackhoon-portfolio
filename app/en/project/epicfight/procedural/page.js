@@ -1,10 +1,8 @@
 'use client'
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 
 export default function Home() {
     const basePath = process.env.BASE_PATH || '';
@@ -14,18 +12,18 @@ export default function Home() {
         <div>
             <div className={styles.main}>
                 <h1>
-                    {t('title')}
+                    Procedural Animation
                 </h1>
                 <h3>
-                    {t('date')}
+                    August 2025
                 </h3>
                 <div className={styles.block}>
                     <h2>
-                        {t('synopsis')}
+                        Synopsis
                     </h2>
                     <div className= {`${styles.block} ${styles.text_and_image}`}>
                         <p>
-                            {t('synopsis_content')}
+                            Animations usually exist as a resource, and are static. But game developers had felt the necessity of interactive animations that reflect the other objects in the game. Procedural animation is one of these technique. It decides the object's pose dynamically counting the environment nearby the object.
                         </p>
                         <Image
                             className={styles.outline_image}
@@ -39,11 +37,11 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('problem')}
+                        The problem of static animations
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('problem_content')}
+                            If your entity is big enough, you'll encounter the issue where the sustaining part of your model looks like it's floating in the air. This is because the animations are made in external program, where you can't consider the environment in game.
                         </p>
                     </div>
                     <div className={styles.imgblock}>
@@ -58,21 +56,21 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('ik')}
+                        Inversed Kinematics
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('ik_content1')}
+                            The solution seems obvious: Make the animations detect terrain. So instead of resulting in the default pose, it calculates the ground height of the foot's location. Inverse kinematics is the best solution in this case. Technically, the way we decide the pose of entities is Forward kinematics, multiplying pose transform from the root to each terminal joints. As the name implies, Inverse kinematics determines the pose from the terminal(or a bone that is not a root). We can give the ground location we calculated before, then set the location of the foot to there.
                         </p>
                         <p>
-                            {t('ik_content2')}{' '}
+                            Then how do we determine the corrected pose? The solution is{' '}
                             <span style={{fontWeight: 'bold'}}>
-                                {t('ik_content3')}
+                                FABRIK
                             </span>
                             <span style={{fontStyle: 'italic'}}>
-                                {t('ik_content4')}
+                                (Forward and Backward Reaching Inverse Kinematics)
                             </span>
-                            {t('ik_content5')}
+                            , one of the methodologies of Inverse kinematics.
                         </p>
                     </div>
                 </div>
@@ -87,20 +85,20 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <p>
-                        {t('ik_content6')}
+                        The picture shows how FABRIK works briefly. The green circle on the illustration is equal to the ground location we supposed above. And the points numbered as 1, 2, 3, and 4 are the endpoints of joints.
                     </p>
                     <p>
-                        {t('ik_content7')}
+                        The algorithm starts by putting the endpoint of the terminal joint (point 1) at the destination point. It creates the difference in the length of the joint. To keep the original length, it pulls the starting point (point 2) over the endpoint (point 1). Repeating this process until the root joint will make a pose that that terminal bone's endpoint is located in our desired location, and all joints are keeping its original length.
                     </p>
                     <p>
-                        {t('ik_content8')}
+                        But if you take a look at the result carefully, the root joint (from point 3 to 4) is slightly off a bit from the original location (the blue circle). We can solve this issue by repeating the algorithm starting from the root joint. The interesting point is that the error of each endpoint (point 1 and 4) after finishing the iteration will decrease as we repeat the process more and more.
                     </p>
                     <p>
-                        {t('ik_content9')}{' '}
+                        Now we can realize the feature of this algorithm—The compromise between accuracy and performance is determined by the number of the loops that correcting joints{' '}
                         <span style={{fontStyle: 'italic'}}>
-                            {t('ik_content10')}
+                            forward and backward
                         </span>
-                        {t('ik_content11')}
+                        . (The name of this algorithm!)
                     </p>
                 </div>
                 <div className={styles.videoblock}>
@@ -131,12 +129,12 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('implementation')}
+                        Implementation
                     </h2>
                     <div className={styles.block}>
                         <div className={styles.block}>
                             <p>
-                                {t('implementation_content1')}
+                                I designed a system that mixes the original animation and inverse kinematics properly. First, I defined a variable for each keyframe that judges if it touches a ground or not. Then checks the ground height only for keyframes checked as touches ground.
                             </p>
                             <div className={styles.imgblock}>
                                 <Image
@@ -150,7 +148,7 @@ export default function Home() {
                         </div>
                         <div className={styles.block}>
                             <p>
-                                {t('implementation_content2')}
+                                This will create the dynamic animation for destination points. Then, I ran FABRIK algorithm for each leg joints.
                             </p>
                         </div>
                         <div className={styles.github_container}>
@@ -195,7 +193,7 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('result')}
+                        Result
                     </h2>
                 </div>
                 <div className={styles.block}>
@@ -209,7 +207,7 @@ export default function Home() {
             </div>
             <div className={styles.references}>
                 <h2>
-                    {t('references')}
+                    References
                 </h2>
                 <p>
                     EgoMoose. {`(2016)`}.{' '}

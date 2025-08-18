@@ -1,10 +1,8 @@
 'use client'
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 
 export default function Home() {
     const basePath = process.env.BASE_PATH || '';
@@ -19,20 +17,20 @@ export default function Home() {
                 width={900}
                 height={300}
             />
-            <h1>{t('title')}</h1>
-            <h2>⚔️ {t('subtitle1')}</h2>
+            <h1>Epic Fight - Minecraft Modding Project</h1>
+            <h2>⚔️ What is Epic Fight?</h2>
             <div className={styles.sentenceBlock}>
-                <p>{t('content1')}</p>
+                <p>Epic Fight is an addon of MinecraftㅡA sandbox game from Mojang Studios. The project has run since August. 2020 and has grown to over 15,000 community members and 20 million downloads.</p>
             </div>
-            <h2>⚙️ {t('subtitle2')}</h2>
+            <h2>⚙️ What does the addon do?</h2>
             <div className={styles.sentenceBlock}>
-                <p>{t('content2')}</p>
+                <p>It completely turns the game into the soul-like genre with more reinforced behaviors for player and enemies. Animations based on skeletal armatures and skinned mesh will make the players' and enemies' movement colorful, and the unique battle system will require your precise mechanics to defeat your enemies.</p>
             </div>
-            <h2>💡 {t('subtitle3')}</h2>
+            <h2>💡 Why did you create the addon?</h2>
             <div className={styles.sentenceBlock}>
-                <p>{t('content3')}</p>
+                <p>If you have ever played Minecraft, you might feel the battle quite monotonous. The only thing you have to do is aiming to an enemy, then hit it. Even tho the combat is not the main content of Minecraft, I saw the possibility that the game could be used as 3D action adventure, with the voxel graphics. Since Minecraft provides useful ways for level design such as creating structures and dungeons, I hoped we could also have well-designed enemies that enhance the player's desire to explore the world.</p>
             </div>
-            <h2>👋 {t('subtitle4')}</h2>
+            <h2>👋 Team members</h2>
             <div className={styles.imgbox}>
                 <div className={styles.imgandname}>
                     <Image
@@ -43,7 +41,7 @@ export default function Home() {
                         height={128}
                     />
                     <h2>Yesman</h2>
-                    <p>{t('developer')}</p>
+                    <p>Developer</p>
                 </div>
                 <div className={styles.imgandname}>
                     <Image
@@ -54,10 +52,10 @@ export default function Home() {
                         height={128}
                     />
                     <h2>Guilherme</h2>
-                    <p>{t('manager')}</p>
+                    <p>Manager</p>
                 </div>
             </div>
-            <h2>⤵️ {t('subtitle5')}</h2>
+            <h2>⤵️ Portals</h2>
             <div className={styles.imgbox}>
                 <div className={styles.imgandname}>
                     <a href="https://www.curseforge.com/minecraft/mc-mods/epic-fight-mod">
@@ -70,7 +68,7 @@ export default function Home() {
                         />
                     </a>
                     <h2>Curseforge</h2>
-                    <p>{t('distribute')}</p>
+                    <p>Mod files distribution</p>
                 </div>
                 <div className={styles.imgandname}>
                     <a href="https://modrinth.com/mod/epic-fight">
@@ -83,7 +81,7 @@ export default function Home() {
                         />
                     </a>
                     <h2>Modrinth</h2>
-                    <p>{t('distribute')}</p>
+                    <p>Mod files distribution</p>
                 </div>
                 <div className={styles.imgandname}>
                     <a href="https://github.com/Epic-Fight/epicfight">
@@ -96,10 +94,10 @@ export default function Home() {
                         />
                     </a>
                     <h2>Github</h2>
-                    <p>{t('source_code')}</p>
+                    <p>Source code</p>
                 </div>
             </div>
-            <h2>✏️ {t('subtitle6')}</h2>
+            <h2>✏️ Devlog</h2>
             <div className={styles.devlog}>
                 <Link className={styles.container} href="/project/epicfight/animation">
                     <Image
@@ -109,7 +107,7 @@ export default function Home() {
                         width={305}
                         height={237}
                     />
-                    <p>{t('post1')}</p>
+                    <p>Skinned mesh and animation</p>
                 </Link>
                 <Link className={styles.container} href="/project/epicfight/obb">
                     <Image
@@ -119,7 +117,7 @@ export default function Home() {
                         width={305}
                         height={237}
                     />
-                    <p>{t('post2')}</p>
+                    <p>Collision detection with OBB</p>
                 </Link>
                 <Link className={styles.container} href="/project/epicfight/bezier">
                     <Image
@@ -129,7 +127,7 @@ export default function Home() {
                         width={305}
                         height={237}
                     />
-                    <p>{t('post3')}</p>
+                    <p>Trail particle using Bezier Curve</p>
                 </Link>
                 <Link className={styles.container} href="/project/epicfight/procedural">
                     <Image
@@ -139,7 +137,7 @@ export default function Home() {
                         width={305}
                         height={237}
                     />
-                    <p>{t('post4')}</p>
+                    <p>Procedural animation</p>
                 </Link>
                 <Link className={styles.container} href="/project/epicfight/cloth">
                     <Image
@@ -149,7 +147,7 @@ export default function Home() {
                         width={305}
                         height={237}
                     />
-                    <p>{t('post5')}</p>
+                    <p>Cloth simulation</p>
                 </Link>
             </div>
             <p style={{ opacity: 0.7, textAlign: "center" }}>

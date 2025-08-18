@@ -1,10 +1,8 @@
 'use client'
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 
 export default function Home() {
     const basePath = process.env.BASE_PATH || '';
@@ -14,18 +12,18 @@ export default function Home() {
         <div>
             <div className={styles.main}>
                 <h1>
-                    {t('title')}
+                    Trail effect with Bezier curve
                 </h1>
                 <h3>
-                    {t('date')}
+                    August 2025
                 </h3>
                 <div className={styles.block}>
                     <h2>
-                        {t('synopsis')}
+                        Synopsis
                     </h2>
                     <div className= {`${styles.block} ${styles.text_and_image}`}>
                         <p>
-                            {t('synopsis_content')}
+                            The trail effect makes games much more colorful. It is commonly used with objects with fast movement, like arrows, bullets, and swords in a human's hand. It reinforces the afterimage effect, a phenomenon that the human brain recognizes a prior image after it has been removed, allowing players to trace the motion of an moving object.
                         </p>
                         <Image
                             className={styles.outline_image}
@@ -39,15 +37,15 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('bezier')}
+                        Bezier Curve
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('bezier_content1')}{' '}
-                            <span style={{fontWeight: 'bold'}}>{t('bezier_content2')}</span>
-                            {t('bezier_content3')}{' '}
-                            <span style={{fontStyle: 'italic'}}>{t('bezier_content4')}</span>
-                            {t('bezier_content5')}
+                            The key principle of the trail effect is the{' '}
+                            <span style={{fontWeight: 'bold'}}>Bezier curve</span>
+                            , which is invented by{' '}
+                            <span style={{fontStyle: 'italic'}}>Pierre Bézier(1910 ~ 1999)</span>
+                            . It uses the curve created by the square function.
                         </p>
                     </div>
                     <div className={styles.imgblock}>
@@ -61,9 +59,9 @@ export default function Home() {
                     </div>
                     <div className={styles.block}>
                         <p>
-                            {t('bezier_content6')}{' '}
-                            <span style={{fontWeight: 'bold'}}>{t('bezier_content7')}</span>
-                            {t('bezier_content8')}
+                            As seen on the picture above, the points decide the shape of the curve. However, the type of Bezier curve we need is something special. Since we want to express the afterimage of a moving object, the curve needs to pass through control points created by the object at a specific time. Thankfully, I found an article that explains the curve what I exactly wanted: The{' '}
+                            <span style={{fontWeight: 'bold'}}>Spline Bezier curve</span>
+                            . I won't handle the mathematical principle in this post, but I'll leave the reference at the end of the post.
                         </p>
                     </div>
                 </div>
@@ -95,11 +93,11 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('implementation')}
+                        Implementation
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('implementation_content1')}
+                            First, to create the control points of the trail effect, I defined the edge and root points of the blade part of each weapon as resources.
                         </p>
                         <div className={styles.codeblock}>
                             <pre>
@@ -144,14 +142,14 @@ export default function Home() {
                         </div>
                         <div className={styles.block}>
                             <p>
-                                {t('implementation_content2')}{' '}
+                                The next step is creating control points based on the player's current animation. I used the Joint transform, introduced on{' '}
                                 <Link
                                     href={`${basePath}/#projects`}
                                     style={{textDecoration: 'underline', fontStyle: 'italic'}}
                                 >
-                                    {t('implementation_content3')}
+                                    Skinned mesh and Armature
                                 </Link>
-                                {t('implementation_content4')}
+                                . The animation transform data is saved as 4x4 matrix, so multiplying the matrix by the weapon's root and edge location vector will return the location of each point in a specific pose. There are three control points created in a tick. one for the previous location, one for the current location, and one for the middle pose between the previous and current pose.
                             </p>
                         </div>
                         <div className={styles.imgblock}>
@@ -184,7 +182,7 @@ export default function Home() {
                         </div>
                         <div className={styles.block}>
                             <p>
-                                {t('implementation_content5')}
+                                Lastly, it creates the interpolated points created by the given control points.
                             </p>
                         </div>
                         <div className={styles.github_container}>
@@ -210,7 +208,7 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('result')}
+                        Result
                     </h2>
                 </div>
                 <div className={styles.block}>
@@ -227,7 +225,7 @@ export default function Home() {
             </div>
             <div className={styles.references}>
                 <h2>
-                    {t('references')}
+                    References
                 </h2>
                 <p>
                     Omar Aflak. {`(2020). `}

@@ -1,10 +1,8 @@
 'use client'
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 
 export default function Home() {
     const basePath = process.env.BASE_PATH || '';
@@ -14,18 +12,18 @@ export default function Home() {
         <div>
             <div className={styles.main}>
                 <h1>
-                    {t('title')}
+                    Skinned Mesh and Skeletal Animations
                 </h1>
                 <h3>
-                    {t('date')}
+                    August 2025
                 </h3>
                 <div className={styles.block}>
                     <h2>
-                        {t('synopsis')}
+                        Synopsis
                     </h2>
                     <div className= {`${styles.block} ${styles.text_and_image}`}>
                         <p>
-                            {t('synopsis_content')}
+                            The skinned mesh and skeletal animation are common techniques for deforming a model in real-time. The model is split into two parts: Mesh and Armature. Mesh defines the shape of the model, and Armature defines how the model can move. Armature consists of multiple Joints in a tree hierarchy. Each vertex has information about which joint and how much the vertex will be affected by the transform of Joints in Armature.
                         </p>
                         <Image
                             className={styles.outline_image}
@@ -39,11 +37,11 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('challenge')}
+                        Challenge
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('challenge_content')}
+                            The main issue was that Minecraft didn't use the skinned mesh system at all. The game's code-controlled movements made all movements robotic and too simple. This is what they seek to keep the mood of the voxel graphic game. Nevertheless, I decided to make skinned mesh into the game because I thought it is still a great deal if we could have more natural movement for players and mobs, as long as it doesn't hurt the overall feeling of the game, and separaing animation code to external resource files would reinforce the productivity noticeably.
                         </p>
                     </div>
                     <div className={styles.imgblock}>
@@ -58,21 +56,21 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('solution')}
+                        Solution
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('solution_content')}
+                            I was interested in 3D modeling and animating. Thus, I had some knowledge about how to use Blender, a 3D graphics software available for free. I imagined a system that I could save all animation data as resource files and read all animation resources at runtime instead of hard-coding all animations in the development environment. To this end, I organized what I needed: An exporter module for Blender, an animation reader.
                         </p>
                     </div>
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('implementation')}
+                        Implementation
                     </h2>
                     <div className={styles.block}>
                         <p>
-                            {t('implementation_content1')}
+                            Blender is written by Python, so I created this exporter module.
                         </p>
                         <div className={styles.github_container}>
                             <Link href="https://github.com/Epic-Fight/blender-json-exporter/blob/master/export_mc_json.py">
@@ -94,7 +92,7 @@ export default function Home() {
                             </Link>
                         </div>
                         <p>
-                            {t('implementation_content2')}
+                            The code exports mesh, armature, and animation in JSON format. As a result, I was able to save my animations into the JSON assets. It was more convenient to maintain them since I could modify the animations depending on my aesthetic sense, not numbers and code. Below is .json file created by the exporter.
                         </p>
                         <div className={styles.codeblock}>
                             <pre>
@@ -138,7 +136,7 @@ export default function Home() {
                     </div>
                     <div className={styles.block}>
                         <p>
-                            {t('implementation_content3')}
+                            Then I made the asset reader inside my mod.
                         </p>
                         <div className={styles.github_container}>
                             <Link href="https://github.com/Epic-Fight/epicfight/blob/1.20.1/src/main/java/yesman/epicfight/api/asset/JsonAssetLoader.java">
@@ -160,7 +158,7 @@ export default function Home() {
                             </Link>
                         </div>
                         <p>
-                            {t('implementation_content4')}
+                            It reads asset files from a pre-defined location. For skinned meshes, it reads each vertex's position, normal, texture, and skinning data. For armatures, it reads joints expressed as a tree structure in JSON. Lastly, for animations, it reads keyframes and joint transforms expressed as a Matrix.
                         </p>
                         <div className={styles.github_container}>
                             <Link href="https://github.com/Epic-Fight/epicfight/blob/1.20.1/src/main/java/yesman/epicfight/api/client/model/SkinnedMesh.java">
@@ -223,7 +221,7 @@ export default function Home() {
                 </div>
                 <div className={styles.block}>
                     <h2>
-                        {t('result')}
+                        Result
                     </h2>
                 </div>
                 <div className={styles.block}>
@@ -240,7 +238,7 @@ export default function Home() {
             </div>
             <div className={styles.references}>
                 <h2>
-                    {t('references')}
+                    References
                 </h2>
                 <p>
                     ThinMatrix. {`(2017)`}. OpenGL Skeletal Animation Tutorial. {' '}

@@ -1,0 +1,129 @@
+.main, .references  {
+  padding: 180px max(calc((100svw - 1000px) / 2), 100px) 180px max(calc((100svw - 1000px) / 2), 100px);
+}
+
+.main h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 36px;
+}
+
+.main h3 {
+  margin-top: 35px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.main p {
+  font-size: 22px;
+}
+
+.main .outline_image {
+  border-radius: 15px;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgb(165, 165, 165);
+}
+
+.main .text_and_image {
+  display: grid;
+  grid-template-columns: auto 427px;
+  gap: 10px;
+}
+
+.main .videoblock {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.main .videoblock p {
+  color: rgb(165, 165, 165);
+}
+
+.main .block {
+  margin-top: 50px;
+}
+
+.main .block p {
+  margin-top: 10px;
+}
+
+.main .block code {
+  font-size: 26px;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  background-color: rgb(43, 43, 43);
+}
+
+.main .imgblock {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main .double_imgs {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.main .github_container {
+  margin: 40px 0px;
+  border-radius: 15px;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgb(165, 165, 165);
+  background-color: rgb(34, 34, 34);
+  transition: outline-width .1s;
+}
+
+.main .github_container:hover {
+  outline-width: 3px;
+}
+
+.main .github_container .internal {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 10px;
+}
+
+.main .github_container .internal h1 {
+  font-size: 20px;
+  font-family: ui-sans-serif;
+  color: rgb(204, 204, 204);
+}
+
+.main .github_container .internal p {
+  font-size: 20px;
+  font-family: ui-sans-serif;
+  color: rgb(124, 124, 124);
+}
+
+.references {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: rgb(26, 26, 30);
+}
+
+.references h2 {
+  font-size: 40px;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.references p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.references .block {
+  margin-top: 50px;
+}
+
+.references a {
+  text-decoration: underline;
+}
