@@ -144,7 +144,7 @@ export default function Home() {
                             <p>
                                 The next step is creating control points based on the player's current animation. I used the Joint transform, introduced on{' '}
                                 <Link
-                                    href={`${basePath}/en/project/epicfight/animation`}
+                                    href={`/en/project/epicfight/animation`}
                                     style={{textDecoration: 'underline', fontStyle: 'italic'}}
                                 >
                                     Skinned mesh and Armature

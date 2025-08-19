@@ -143,7 +143,7 @@ export default function Home() {
                             <p>
                                 다음 목표는 현재 플레이어의 애니메이션을 기반으로 제어점을 생성하는 것입니다. 이때{' '}
                                 <Link
-                                    href={`${basePath}/ko/project/epicfight/animation`}
+                                    href={`/ko/project/epicfight/animation`}
                                     style={{textDecoration: 'underline', fontStyle: 'italic'}}
                                 >
                                     Skinned mesh 와 애니메이션

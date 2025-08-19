@@ -29,7 +29,7 @@ export default async function RootLayout({ children, params }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <header>
           <div className="navbar">
-            <Link href={`ko/#home`}>
+            <Link href={`/ko/#home`}>
               <Image
                 className="logo"
                 src={`${basePath}/yesman.png`}
@@ -41,13 +41,13 @@ export default async function RootLayout({ children, params }) {
             <nav>
               <ul>
                 <li>
-                  <Link href={`ko/#about`}>About</Link>
+                  <Link href={`/ko/#about`}>About</Link>
                 </li>
                 <li>
-                  <Link href={`ko/#projects`}>Projects</Link>
+                  <Link href={`/ko/#projects`}>Projects</Link>
                 </li>
                 <li>
-                  <Link href={`ko/#activities`}>Activities</Link>
+                  <Link href={`/ko/#activities`}>Activities</Link>
                 </li>
               </ul>
             </nav>
