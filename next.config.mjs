@@ -8,11 +8,11 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/jackhoon-portfolio/' : '',
-  basePath: isProd ? '/jackhoon-portfolio' : '',
+  assetPrefix: isProd ? '/jaehoon-portfolio/' : '',
+  basePath: isProd ? '/jaehoon-portfolio' : '',
   output: 'export',
   publicRuntimeConfig: {
-    basePath: isProd ? '/jackhoon-portfolio' : '',
+    basePath: isProd ? '/jaehoon-portfolio' : '',
   }
 };
 
