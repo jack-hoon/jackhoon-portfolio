@@ -6,7 +6,6 @@ import styles from "./page.module.css";
 
 export default function Home() {
     const basePath = process.env.BASE_PATH || '';
-    const t = useTranslations('Project.epicfight.bezier');
 
     return (
         <div>
