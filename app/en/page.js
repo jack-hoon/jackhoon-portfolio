@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import IframelyEmbed from "../components/IframelyEmbed";
+import publicRuntimeConfig from "../../next.config.mjs";
 
 import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
-  const basePath = process.env.BASE_PATH || '';
+  const basePath = publicRuntimeConfig.basePath || '';
   const [state1, setState1] = useState('shown');
   const [state2, setState2] = useState('hidden');
   const state1RowRef = useRef(null);
@@ -215,7 +216,7 @@ export default function Home() {
       <div className={styles.projects} id="projects">
         <h1 style={{fontSize: '45px'}}>🗁 Projects</h1>
         <div className={styles.container}>
-          <Link className={styles.block} href={`/project/epicfight`}>
+          <Link className={styles.block} href={`/en/project/epicfight`}>
             <Image
               aria-hidden
               src={`${basePath}/epicfight.png`}

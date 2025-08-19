@@ -4,8 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import publicRuntimeConfig from "../../../../next.config.mjs";
+
 export default function Home() {
-    const basePath = process.env.BASE_PATH || '';
+    const basePath = publicRuntimeConfig.basePath || '';
     
     return (
         <div className={styles.main}>
@@ -98,7 +100,7 @@ export default function Home() {
             </div>
             <h2>✏️ Devlog</h2>
             <div className={styles.devlog}>
-                <Link className={styles.container} href="/project/epicfight/animation">
+                <Link className={styles.container} href="/en/project/epicfight/animation">
                     <Image
                         aria-hidden
                         src={`${basePath}/skeletal_mesh.png`}
@@ -108,7 +110,7 @@ export default function Home() {
                     />
                     <p>Skinned mesh and animation</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/obb">
+                <Link className={styles.container} href="/en/project/epicfight/obb">
                     <Image
                         aria-hidden
                         src={`${basePath}/obb.png`}
@@ -118,7 +120,7 @@ export default function Home() {
                     />
                     <p>Collision detection with OBB</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/bezier">
+                <Link className={styles.container} href="/en/project/epicfight/bezier">
                     <Image
                         aria-hidden
                         src={`${basePath}/trail_example.png`}
@@ -128,7 +130,7 @@ export default function Home() {
                     />
                     <p>Trail particle using Bezier Curve</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/procedural">
+                <Link className={styles.container} href="/en/project/epicfight/procedural">
                     <Image
                         aria-hidden
                         src={`${basePath}/procedural.png`}
@@ -138,7 +140,7 @@ export default function Home() {
                     />
                     <p>Procedural animation</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/cloth">
+                <Link className={styles.container} href="/en/project/epicfight/cloth">
                     <Image
                         aria-hidden
                         src={`${basePath}/cloth.png`}

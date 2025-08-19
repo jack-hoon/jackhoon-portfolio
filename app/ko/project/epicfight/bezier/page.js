@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import publicRuntimeConfig from "../../../../../next.config.mjs";
 
 export default function Home() {
-    const basePath = process.env.BASE_PATH || '';
+    const basePath = publicRuntimeConfig.basePath || '';
     
     return (
         <div>
@@ -142,7 +143,7 @@ export default function Home() {
                             <p>
                                 다음 목표는 현재 플레이어의 애니메이션을 기반으로 제어점을 생성하는 것입니다. 이때{' '}
                                 <Link
-                                    href={`${basePath}/#projects`}
+                                    href={`${basePath}/ko/project/epicfight/animation`}
                                     style={{textDecoration: 'underline', fontStyle: 'italic'}}
                                 >
                                     Skinned mesh 와 애니메이션

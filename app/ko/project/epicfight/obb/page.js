@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import publicRuntimeConfig from "../../../../../next.config.mjs";
 
 export default function Home() {
-    const basePath = process.env.BASE_PATH || '';
+    const basePath = publicRuntimeConfig.basePath || '';
     
     return (
         <div>

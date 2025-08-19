@@ -7,8 +7,10 @@ import IframelyEmbed from "../components/IframelyEmbed";
 
 import { useState, useEffect, useRef } from "react";
 
+import publicRuntimeConfig from "../../next.config.mjs";
+
 export default function Home() {
-  const basePath = process.env.BASE_PATH || '';
+  const basePath = publicRuntimeConfig.basePath || '';
   const [state1, setState1] = useState('shown');
   const [state2, setState2] = useState('hidden');
   const state1RowRef = useRef(null);
@@ -215,7 +217,7 @@ export default function Home() {
       <div className={styles.projects} id="projects">
         <h1 style={{fontSize: '45px'}}>🗁 프로젝트</h1>
         <div className={styles.container}>
-          <Link className={styles.block} href={`/project/epicfight`}>
+          <Link className={styles.block} href={`/ko/project/epicfight`}>
             <Image
               aria-hidden
               src={`${basePath}/epicfight.png`}

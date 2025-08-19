@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import publicRuntimeConfig from "../../../../next.config.mjs";
 
 export default function Home() {
-    const basePath = process.env.BASE_PATH || '';
+    const basePath = publicRuntimeConfig.basePath || '';
 
     return (
         <div className={styles.main}>
@@ -98,7 +99,7 @@ export default function Home() {
             </div>
             <h2>✏️ 개발일지</h2>
             <div className={styles.devlog}>
-                <Link className={styles.container} href="/project/epicfight/animation">
+                <Link className={styles.container} href="/ko/project/epicfight/animation">
                     <Image
                         aria-hidden
                         src={`${basePath}/skeletal_mesh.png`}
@@ -108,7 +109,7 @@ export default function Home() {
                     />
                     <p>Skinned mesh 와 애니메이션</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/obb">
+                <Link className={styles.container} href="/ko/project/epicfight/obb">
                     <Image
                         aria-hidden
                         src={`${basePath}/obb.png`}
@@ -118,7 +119,7 @@ export default function Home() {
                     />
                     <p>OBB를 사용한 충돌 감지</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/bezier">
+                <Link className={styles.container} href="/ko/project/epicfight/bezier">
                     <Image
                         aria-hidden
                         src={`${basePath}/trail_example.png`}
@@ -128,7 +129,7 @@ export default function Home() {
                     />
                     <p>Bezier Curve를 이용해 궤적 그리기</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/procedural">
+                <Link className={styles.container} href="/ko/project/epicfight/procedural">
                     <Image
                         aria-hidden
                         src={`${basePath}/procedural.png`}
@@ -138,7 +139,7 @@ export default function Home() {
                     />
                     <p>절차적 애니메이션</p>
                 </Link>
-                <Link className={styles.container} href="/project/epicfight/cloth">
+                <Link className={styles.container} href="/ko/project/epicfight/cloth">
                     <Image
                         aria-hidden
                         src={`${basePath}/cloth.png`}

@@ -10,10 +10,10 @@ const nextConfig = {
   },
   assetPrefix: isProd ? '/jackhoon-portfolio/' : '',
   basePath: isProd ? '/jackhoon-portfolio' : '',
-  env: {
-    BASE_PATH: isProd ? '/jackhoon-portfolio' : '',
-  },
-  output: 'export'
+  output: 'export',
+  publicRuntimeConfig: {
+    basePath: isProd ? '/jackhoon-portfolio' : '',
+  }
 };
 
 export default nextConfig;
