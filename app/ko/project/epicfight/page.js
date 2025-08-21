@@ -41,7 +41,7 @@ export default function Home() {
                         height={128}
                     />
                     <h2>Yesman</h2>
-                    <p>개발자</p>
+                    <p>리드 개발자</p>
                 </div>
                 <div className={styles.imgandname}>
                     <Image
@@ -53,6 +53,50 @@ export default function Home() {
                     />
                     <h2>Guilherme</h2>
                     <p>프로젝트 매니저</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/reascer.png`}
+                        alt="Reascer Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Reascer</h2>
+                    <p>개발자</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/squoshi.png`}
+                        alt="Guilherme Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Squoshi</h2>
+                    <p>개발자</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/forixaim.png`}
+                        alt="Guilherme Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Forixaim</h2>
+                    <p>개발자</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/m3tte.png`}
+                        alt="Guilherme Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>M3tte</h2>
+                    <p>개발자</p>
                 </div>
             </div>
             <h2>⤵️ 관련 링크</h2>

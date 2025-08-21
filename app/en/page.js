@@ -114,7 +114,7 @@ export default function Home() {
               <div className={styles.greeting}>
                 <h3>Hi! I'm</h3>
                 <h1>Yesman</h1>
-                <h2>A lead developer of Epic Fight team</h2>
+                <h2>The lead developer of Epic Fight team</h2>
                 <p
                   className={styles.nextlink}
                   onClick={handleAkaClick2}

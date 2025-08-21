@@ -42,7 +42,7 @@ export default function Home() {
                         height={128}
                     />
                     <h2>Yesman</h2>
-                    <p>Developer</p>
+                    <p>Lead Developer</p>
                 </div>
                 <div className={styles.imgandname}>
                     <Image
@@ -54,6 +54,50 @@ export default function Home() {
                     />
                     <h2>Guilherme</h2>
                     <p>Manager</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/reascer.png`}
+                        alt="Reascer Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Reascer</h2>
+                    <p>Developer</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/squoshi.png`}
+                        alt="Squoshi Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Squoshi</h2>
+                    <p>Developer</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/forixaim.png`}
+                        alt="Forixaim Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>Forixaim</h2>
+                    <p>Developer</p>
+                </div>
+                <div className={styles.imgandname}>
+                    <Image
+                        aria-hidden
+                        src={`${basePath}/m3tte.png`}
+                        alt="M3tte Profile"
+                        width={128}
+                        height={128}
+                    />
+                    <h2>M3tte</h2>
+                    <p>Developer</p>
                 </div>
             </div>
             <h2>⤵️ Portals</h2>
