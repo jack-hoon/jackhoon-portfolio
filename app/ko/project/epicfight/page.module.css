@@ -50,7 +50,19 @@
   gap: 10px;
 }
 
+.main .imgbox .imgandname .emoji {
+  text-align: center;
+  width: 100%;
+}
+
+.main .imgbox .imgandname .emoji img {
+  display: inline-block;
+  padding-top: 10px;
+  width: 32px;
+}
+
 .main .imgbox .imgandname h2 {
+  display: inline-block;
   margin-top: 10px;
   text-align: center;
   font-size: 25px;

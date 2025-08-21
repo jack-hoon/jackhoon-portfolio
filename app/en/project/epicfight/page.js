@@ -41,7 +41,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>Yesman</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/kr.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            Yesman
+                        </h2>
+                    </div>
                     <p>Lead Developer</p>
                 </div>
                 <div className={styles.imgandname}>
@@ -52,7 +63,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>Guilherme</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/br.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            Guilherme
+                        </h2>
+                    </div>
                     <p>Manager</p>
                 </div>
                 <div className={styles.imgandname}>
@@ -63,7 +85,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>Reascer</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/fr.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            Reascer
+                        </h2>
+                    </div>
                     <p>Developer</p>
                 </div>
                 <div className={styles.imgandname}>
@@ -74,7 +107,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>Squoshi</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/us.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            squoshi
+                        </h2>
+                    </div>
                     <p>Developer</p>
                 </div>
                 <div className={styles.imgandname}>
@@ -85,7 +129,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>Forixaim</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/us.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            Forixaim
+                        </h2>
+                    </div>
                     <p>Developer</p>
                 </div>
                 <div className={styles.imgandname}>
@@ -96,7 +151,18 @@ export default function Home() {
                         width={128}
                         height={128}
                     />
-                    <h2>M3tte</h2>
+                    <div className={styles.emoji}>
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/us.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
+                        <h2>
+                            M3tte
+                        </h2>
+                    </div>
                     <p>Developer</p>
                 </div>
             </div>
