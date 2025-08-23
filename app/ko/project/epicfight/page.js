@@ -136,6 +136,13 @@ export default function Home() {
                             width={32}
                             height={32}
                         />
+                        <Image
+                            aria-hidden
+                            src={`${basePath}/cn.png`}
+                            alt="emoji"
+                            width={32}
+                            height={32}
+                        />
                         <h2>
                             Forixaim
                         </h2>
@@ -153,7 +160,7 @@ export default function Home() {
                     <div className={styles.emoji}>
                         <Image
                             aria-hidden
-                            src={`${basePath}/us.png`}
+                            src={`${basePath}/au.png`}
                             alt="emoji"
                             width={32}
                             height={32}
